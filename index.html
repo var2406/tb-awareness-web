@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TB Detect & Care</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <!-- Added chatbot script -->
+        <script src="chatbot_logic.js" defer></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">TB Detect & Care</div>
+            <!-- Only change: Add this line to your existing nav-links -->
+           <ul class="nav-links">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="about.html">About</a></li>
+             <li><a href="contact.html">Contact</a></li>
+              <!-- Add this new line - matches existing nav style -->
+             <li><a href="patient.html" class="chatbot-link">Chat Assistant</a></li>
+          </ul>
+        </nav>
+
+      <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to TB Detect & Care</h1>
+            <p>An AI-powered platform to detect Tuberculosis and support treatment</p>
+            
+            <div class="role-buttons">
+                <a href="doctor.html" class="btn doctor-btn">I'm a Doctor</a>
+                <a href="patient.html" class="btn patient-btn">I'm a Patient</a>
+            </div>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <h2>How It Works</h2>
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">1</div>
+            <h3>Fill Patient Instructions</h3>
+            <p>Doctor enters patient details </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">2</div>
+            <h3>Conduct Analysis</h3>
+            <p> analyzes of  the input take place to  detect TB patterns and risk level.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">3</div>
+            <h3>Provide Follow-up Instructions</h3>
+            <p>System generates a report with risk score and next steps.</p>
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- Patient Reminder Card Only (No Chatbot) -->
+
+   <!-- Patient Reminder Section with Enhanced Video -->
+
+   
+<section class="patient-reminder">
+    <h2>For Patients</h2>
+    <div class="reminder-card elegant-card">
+        <div class="card-header">
+            <div class="reminder-icon">💊</div>
+            <h3>Your Treatment Companion</h3>
+        </div>
+        <div class="card-body">
+            <p class="card-intro">We support your TB treatment journey with:</p>
+            <ul class="feature-list">
+                <li class="feature-item">
+                    <span class="feature-icon">📅</span>
+                    <div class="feature-text">
+                        <strong>Smart Reminders</strong>
+                        <p>Never miss a dose with personalized alerts</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-icon">ℹ️</span>
+                    <div class="feature-text">
+                        <strong>TB Education</strong>
+                        <p>Empowering Communities with Knowledge to Fight TB</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-icon">💬</span>
+                    <div class="feature-text">
+                        <strong>Instant Support</strong>
+                        <p>24/7 answers to your questions</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="card-footer">
+            <a href="patient.html" class="btn patient-btn">
+                <span>Access Portal</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+        
+        <!-- Enhanced Video Container -->
+        <div class="video-container">
+            <div class="video-header" id="videoToggle">
+                <h3>TB Awareness Video</h3>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="video-wrapper collapsed">
+                <div class="play-button-overlay">
+                    <div class="play-icon">▶</div>
+                </div>
+                <iframe src="https://www.youtube.com/embed/H9RPGYFusIY" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <p>© 2025 TB Detect & Care | Ummed-e-TB</p>
+    </footer>
+</body>
+</html>

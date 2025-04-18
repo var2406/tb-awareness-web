@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | TB Detect & Care</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== CONTACT PAGE STYLES ===== */
+        :root {
+            --dark-blue: #03045E;
+            --primary-blue: #0077B6;
+            --teal: #00B4D8;
+            --light-blue: #90E0EF;
+            --pale-blue: #CAF0F8;
+            --white: #FFFFFF;
+            --black: #333333;
+        }
+
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary-blue), var(--teal));
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            align-items: start; /* Changed from default stretch */
+        }
+
+        .contact-methods {
+            display: grid;
+            gap: 2rem;
+            height: 100%; /* Ensure it takes full height */
+        }
+
+        .contact-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 116, 182, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-card h2 {
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .contact-card h2 i {
+            color: var(--teal);
+            font-size: 1.3rem;
+        }
+
+        .contact-card p {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .contact-form {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem; /* Reduced padding */
+            box-shadow: 0 5px 20px rgba(0, 116, 182, 0.1);
+            height: 100%; /* Match height of contact cards */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form h2 {
+            color: var(--primary-blue);
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem; /* Slightly smaller padding */
+            margin-bottom: 1rem; /* Reduced margin */
+            border: 1px solid var(--light-blue);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--teal);
+        }
+
+        .contact-form textarea {
+            height: 120px; /* Reduced height */
+            resize: vertical;
+            flex-grow: 1; /* Takes available space */
+        }
+
+        .btn {
+            background: var(--teal);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.5rem; /* Smaller button */
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: auto; /* Pushes button to bottom */
+        }
+
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-form {
+                height: auto;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .contact-hero {
+                padding: 3rem 1rem;
+            }
+            
+            .contact-card, .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TB Detect & Care</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-hero">
+        <h1>Get In Touch</h1>
+        <p>We'd love to hear from you! Reach out with questions, partnership inquiries, or feedback.</p>
+    </div>
+
+    <main class="contact-container">
+        <div class="contact-grid">
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <h2><i class="fas fa-envelope"></i> Email Us</h2>
+                    <p><i class="fas fa-user-graduate"></i> sanjana173btcse23@igdtuw.ac.in</p>
+                    <p><i class="fas fa-user-graduate"></i> shrishti192btcse23@igdtuw.ac.in</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h2><i class="fas fa-code"></i> Development Team</h2>
+                    <p><i class="fas fa-user-tie"></i> Sanjana Kumari - AI Developer</p>
+                    <p><i class="fas fa-user-tie"></i> Shrishti Thakur - Frontend Developer</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h2><i class="fas fa-hospital"></i> For Hospitals</h2>
+                    <p><i class="fas fa-handshake"></i> partners@tbdetectcare.com</p>
+                    <p><i class="fas fa-info-circle"></i> info@sunshinehealth.org</p>
+                    <p><i class="fas fa-headset"></i> support@lifecarecenter.com</p>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <h2>Send Us a Message</h2>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 TB Detect & Care | Connecting Healthcare</p>
+    </footer>
+</body>
+</html>

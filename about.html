@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>About Us | TB Detect & Care</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     <link rel="stylesheet" href="style.css">
+     <style>
+         /* ===== ABOUT PAGE STYLES ===== */
+         :root {
+             --dark-blue: #03045E;
+             --primary-blue: #0077B6;
+             --teal: #00B4D8;
+             --light-blue: #90E0EF;
+             --pale-blue: #CAF0F8;
+             --white: #FFFFFF;
+             --black: #333333;
+         }
+ 
+         .about-hero {
+             background: linear-gradient(135deg, var(--primary-blue), var(--teal));
+             color: var(--white);
+             padding: 4rem 2rem;
+             text-align: center;
+             position: relative;
+             overflow: hidden;
+         }
+ 
+         .about-hero h1 {
+             font-size: 2.5rem;
+             margin-bottom: 1rem;
+         }
+ 
+         .about-hero p {
+             font-size: 1.1rem;
+             max-width: 700px;
+             margin: 0 auto;
+             opacity: 0.9;
+         }
+ 
+         .about-container {
+             max-width: 1000px;
+             margin: 0 auto;
+             padding: 2rem;
+         }
+ 
+         .about-card {
+             background: var(--white);
+             border-radius: 12px;
+             padding: 2rem;
+             margin-bottom: 2rem;
+             box-shadow: 0 5px 20px rgba(0, 116, 182, 0.1);
+         }
+ 
+         .about-card h2 {
+             color: var(--primary-blue);
+             font-size: 1.6rem;
+             margin-bottom: 1.5rem;
+             display: flex;
+             align-items: center;
+             gap: 0.8rem;
+         }
+ 
+         .about-card h2 i {
+             color: var(--teal);
+             font-size: 1.4rem;
+         }
+ 
+         /* Compact Team Section */
+         .team-section {
+             display: flex;
+             flex-wrap: wrap;
+             gap: 2rem;
+             justify-content: center;
+             margin-top: 2rem;
+         }
+ 
+         .team-member {
+             flex: 1;
+             min-width: 300px;
+             background: var(--white);
+             border-radius: 10px;
+             padding: 2rem;
+             box-shadow: 0 5px 15px rgba(0, 116, 182, 0.1);
+             text-align: center;
+             transition: transform 0.3s;
+         }
+ 
+         .team-member:hover {
+             transform: translateY(-5px);
+         }
+         .member-avatar {
+             width: 120px;
+             height: 120px;
+             border-radius: 50%;
+             object-fit: cover;
+             margin: 0 auto 1rem;
+             border: 3px solid var(--light-blue);
+             background: var(--pale-blue);
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             color: var(--primary-blue);
+             font-size: 2.5rem;
+             font-weight: bold;
+         }
+ 
+         .member-name {
+             color: var(--primary-blue);
+             font-size: 1.3rem;
+             margin: 0.5rem 0;
+         }
+ 
+         .member-role {
+             color: var(--teal);
+             font-weight: 500;
+             margin-bottom: 1rem;
+         }
+ 
+         .member-bio {
+             color: var(--dark-blue);
+             font-size: 0.95rem;
+             line-height: 1.6;
+         }
+ 
+         .social-links {
+             display: flex;
+             justify-content: center;
+             gap: 1rem;
+             margin-top: 1.5rem;
+         }
+ 
+         .social-links a {
+             color: var(--primary-blue);
+             font-size: 1.2rem;
+             transition: color 0.3s;
+         }
+ 
+         .social-links a:hover {
+             color: var(--teal);
+         }
+ 
+         /* Features Grid */
+         .features-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 1.5rem;
+             margin-top: 2rem;
+         }
+ 
+         .feature-item {
+             background: rgba(144, 224, 239, 0.15);
+             border-left: 3px solid var(--teal);
+             padding: 1.5rem;
+             border-radius: 0 8px 8px 0;
+         }
+ 
+         .feature-item h4 {
+             color: var(--primary-blue);
+             margin-bottom: 0.5rem;
+             display: flex;
+             align-items: center;
+             gap: 0.5rem;
+         }
+ 
+         @media (max-width: 768px) {
+             .about-hero {
+                 padding: 3rem 1.5rem;
+             }
+             
+             .about-hero h1 {
+                 font-size: 2rem;
+             }
+             
+             .team-member {
+                 min-width: 100%;
+             }
+         }
+     </style>
+ </head>
+ <body>
+     <nav class="navbar">
+         <div class="logo">TB Detect & Care</div>
+         <ul class="nav-links">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="about.html" class="active">About</a></li>
+             <li><a href="contact.html">Contact</a></li>
+         </ul>
+     </nav>
+ 
+     <div class="about-hero">
+         <h1>Our Story</h1>
+         <p>Two passionate developers creating innovative solutions for tuberculosis detection</p>
+     </div>
+ 
+     <main class="about-container">
+        <div class="about-card">
+            <h2><i class="fas fa-bullseye"></i> Our Mission</h2>
+            <p>As a dedicated team of two, we're committed to developing accessible AI tools that help detect tuberculosis early. Our goal is to bridge the gap between medical expertise and technology to create impactful healthcare solutions.</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4><i class="fas fa-lightbulb"></i> Innovative</h4>
+                    <p>Developing cutting-edge AI for medical imaging analysis</p>
+                </div>
+                <div class="feature-item">
+                    <h4><i class="fas fa-heart"></i> Compassionate</h4>
+                    <p>Creating solutions that truly help patients and doctors</p>
+                </div>
+                <div class="feature-item">
+                    <h4><i class="fas fa-rocket"></i> Driven</h4>
+                    <p>Committed to making a difference in global health</p>
+                </div>
+            </div>
+        </div>
+

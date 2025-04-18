@@ -1,0 +1,201 @@
+/* ===== TB EDUCATION RESOURCES PAGE ===== */
+/* Color Variables */
+:root {
+    --dark-blue: #03045E;
+    --primary-blue: #0077B6;
+    --teal: #00B4D8;
+    --light-blue: #90E0EF;
+    --pale-blue: #CAF0F8;
+    --white: #FFFFFF;
+    --black: #333333;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--pale-blue);
+    color: var(--dark-blue);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--dark-blue);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--pale-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--teal);
+}
+
+/* Main Content */
+.education-resources {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.resources-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.resources-header h1 {
+    color: var(--primary-blue);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.resources-header p {
+    color: var(--dark-blue);
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Resource Grid */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.resource-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 116, 182, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 116, 182, 0.15);
+}
+
+.resource-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: var(--light-blue);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-blue);
+}
+
+.resource-content h3 {
+    color: var(--primary-blue);
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+}
+
+.resource-content p {
+    color: var(--dark-blue);
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--teal);
+    color: var(--white);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    margin-top: auto;
+}
+
+.download-btn:hover {
+    background: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
+}
+
+.download-btn svg {
+    transition: transform 0.3s;
+}
+
+.download-btn:hover svg {
+    transform: translateX(3px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-blue);
+    color: var(--pale-blue);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .resources-header h1 {
+        font-size: 2rem;
+    }
+    
+    .resource-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .resource-card {
+        padding: 1.5rem;
+    }
+    
+    .resource-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+}

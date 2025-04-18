@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TB Risk Assessment | Doctor Portal</title>
+    <link rel="stylesheet" href="doctor.css"> <!-- Doctor-specific styles -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TB Detect & Care</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../patient.html">Patient Portal</a></li>
+        </ul>
+    </nav>
+
+    <main class="dashboard">
+        <h1>TB Risk Assessment Tool</h1>
+        <p class="subtitle">Based on WHO TB Risk Assessment Guidelines</p>
+        
+        <div class="assessment-container">
+            <!-- Patient Information -->
+            <div class="form-section">
+                <h2><i class="fas fa-user-injured"></i> Patient Information</h2>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" min="1" max="120">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Symptoms Section -->
+            <div class="form-section">
+                <h2><i class="fas fa-thermometer-half"></i> Symptoms</h2>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="cough"> Persistent cough (>2 weeks)
+                    </label>
+                    <label>
+                        <input type="checkbox" id="fever"> Fever (>1 week)
+                    </label>
+                    <label>
+                        <input type="checkbox" id="weight-loss"> Unexplained weight loss
+                    </label>
+                    <label>
+                        <input type="checkbox" id="night-sweats"> Night sweats
+                    </label>
+                    <label>
+                        <input type="checkbox" id="chest-pain"> Chest pain
+                    </label>
+                    <label>
+                        <input type="checkbox" id="hemoptysis"> Coughing blood
+                    </label>
+                </div>
+            </div>
+
+            <!-- Risk Factors -->
+            <div class="form-section">
+                <h2><i class="fas fa-exclamation-triangle"></i> Risk Factors</h2>
+                <div class="form-group">
+                    <label for="hiv">HIV Status</label>
+                    <select id="hiv">
+                        <option value="negative">Negative</option>
+                        <option value="positive">Positive</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                </div>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="diabetes"> Diabetes
+                    </label>
+                    <label>
+                        <input type="checkbox" id="smoking"> Current smoker
+                    </label>
+                    <label>
+                        <input type="checkbox" id="alcohol"> Heavy alcohol use
+                    </label>
+                    <label>
+                        <input type="checkbox" id="contact"> Recent TB contact
+                    </label>
+                    <label>
+                        <input type="checkbox" id="immunosuppressant"> Immunosuppressant drugs
+                    </label>
+                </div>
+            </div>
+
+            <!-- Lab Reports -->
+            <div class="form-section">
+                <h2><i class="fas fa-flask"></i> Lab Reports (Optional)</h2>
+                <div class="form-group">
+                    <label for="sputum-test">Sputum Test Result</label>
+                    <select id="sputum-test">
+                        <option value="not-done">Not Done</option>
+                        <option value="negative">Negative</option>
+                        <option value="positive">Positive</option>
+                    </select>
+                </div>
+                
+            </div>
+
+            <button id="calculate-btn" class="btn analyze-btn">Calculate TB Risk</button>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results-container" class="results-container hidden">
+            <h2>Risk Assessment Result</h2>
+            <div class="risk-meter">
+                <div class="meter-bar" id="risk-meter-bar"></div>
+                <div class="meter-labels">
+                    <span>Low</span>
+                    <span>Medium</span>
+                    <span>High</span>
+                </div>
+            </div>
+            <div class="result-details">
+                <p><strong>Risk Score:</strong> <span id="risk-score">0</span>/100</p>
+                <p><strong>Risk Level:</strong> <span id="risk-level">-</span></p>
+                <div class="recommendations" id="recommendations">
+                    <!-- Filled by doctor.js -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 TB Detect & Care | Doctor Portal</p>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Doctor-specific JS -->
+    <script src="doctor.js"></script>
+</body>
+</html>
